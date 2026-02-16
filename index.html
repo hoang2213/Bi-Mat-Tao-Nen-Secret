@@ -101,8 +101,8 @@ p  { font-size: 18px; margin: 8px 0; }
         <p>✨ 2026 ✨</p>
         <p>💖 Sức khỏe dồi dào</p>
         <p>💰 Tài lộc đầy nhà</p>
-        <p>🌸 Gia đình hạnh phúc</p>
         <p>🎆 Vạn sự như ý 🎆</p>
+        <p>🌸 Chúc mấy người đẹp ngày càng 6452</p>
         <button class="close" onclick="closePaper()">Đóng</button>
     </div>
 </div>
@@ -148,8 +148,26 @@ function createFirework() {
     document.body.appendChild(fw);
 
     setTimeout(() => fw.remove(), 1500);
+
+    .arrow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    animation: bounce 1s infinite;
+    color: white;
+}
+
+@keyframes bounce {
+    0%   { transform: translateX(-50%) translateY(0); }
+    50%  { transform: translateX(-50%) translateY(-15px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}
+
 }
 </script>
 
 </body>
 </html>
+

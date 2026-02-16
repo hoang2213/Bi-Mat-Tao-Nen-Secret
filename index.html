@@ -2,7 +2,8 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Thiệp Chúc Mừng Năm Mới</title>
+<title>🤫 Secret</title>
+
 <style>
 body {
     margin: 0;
@@ -13,6 +14,29 @@ body {
     align-items: center;
     font-family: 'Segoe UI', sans-serif;
     overflow: hidden;
+}
+
+/* Bọc nút */
+.wrapper {
+    position: relative;
+    text-align: center;
+}
+
+/* Mũi tên */
+.arrow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    animation: bounce 1s infinite;
+    color: white;
+}
+
+@keyframes bounce {
+    0%   { transform: translateX(-50%) translateY(0); }
+    50%  { transform: translateX(-50%) translateY(-15px); }
+    100% { transform: translateX(-50%) translateY(0); }
 }
 
 /* Nút mở */
@@ -58,7 +82,7 @@ body {
 h1 { color: #c31432; }
 p  { font-size: 18px; margin: 8px 0; }
 
-/* Đóng */
+/* Nút đóng */
 .close {
     margin-top: 15px;
     padding: 10px 25px;
@@ -91,10 +115,16 @@ p  { font-size: 18px; margin: 8px 0; }
 }
 </style>
 </head>
+
 <body>
 
-<button class="open-btn" onclick="openPaper()">🎇 Bấm mở thiệp 🎇</button>
+<!-- NÚT + MŨI TÊN -->
+<div class="wrapper">
+    <div class="arrow">⬇️</div>
+    <button class="open-btn" onclick="openPaper()">Bấm vào đây</button>
+</div>
 
+<!-- THIỆP -->
 <div class="overlay" id="overlay">
     <div class="paper" id="paper">
         <h1>🎉 Chúc Mừng Năm Mới 🎉</h1>
@@ -146,28 +176,9 @@ function createFirework() {
     fw.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
 
     document.body.appendChild(fw);
-
     setTimeout(() => fw.remove(), 1500);
-
-    .arrow {
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 50px;
-    animation: bounce 1s infinite;
-    color: white;
-}
-
-@keyframes bounce {
-    0%   { transform: translateX(-50%) translateY(0); }
-    50%  { transform: translateX(-50%) translateY(-15px); }
-    100% { transform: translateX(-50%) translateY(0); }
-}
-
 }
 </script>
 
 </body>
 </html>
-
